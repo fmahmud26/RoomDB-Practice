@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.roomdb_practice">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".delete_user.DeleteUserActivity"></activity>
+        <activity android:name=".read_user.ViewUserDetailsActivity" />
+        <activity android:name=".read_user.ViewSearchResultActivity" />
+        <activity android:name=".search_user.SearchActivity" />
+        <activity android:name=".update_user.UpdateUserActivity" />
+        <activity android:name=".create_user.CreateUserActivity" />
+        <activity android:name=".read_user.ViewAllActivity" />
+        <activity android:name=".main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

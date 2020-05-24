@@ -1,0 +1,2 @@
+rootProject.name='RoomDB-Practice'
+include ':app'
