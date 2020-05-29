@@ -62,13 +62,14 @@ public class CreateUserActivity extends AppCompatActivity {
         new SaveUserToDBAsyncTask(CreateUserActivity.this, user).execute();
     }
 
-    class SaveUserToDBAsyncTask extends AsyncTask<Void, Void, Boolean> {
+
+    class SaveUserToDBAsyncTask extends AsyncTask<Void, Void, Boolean> {  // create user to room database
 
         WeakReference<CreateUserActivity> weakActivity;
         User user;
 
-        public SaveUserToDBAsyncTask(CreateUserActivity context, User user) {
-            weakActivity = new WeakReference<>(context);
+        public SaveUserToDBAsyncTask(CreateUserActivity weakActivity, User user) {
+            this.weakActivity = new WeakReference<>(weakActivity);
             this.user = user;
         }
 

@@ -3,9 +3,10 @@ package com.example.roomdb_practice.model;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "user_table")
+@Entity(tableName = "user_table", indices = {@Index(value = {"number"}, unique = true)})
 public class User {
 
     @PrimaryKey(autoGenerate = true)
